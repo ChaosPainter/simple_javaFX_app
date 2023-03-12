@@ -1,5 +1,6 @@
 package com.example.simple_javafx_app;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -64,6 +65,6 @@ public class HelloController {
 
     @FXML private void menu_click_close() //tu dodać Platform.exit()
     {
-
+        Platform.exit();
     }
 }
