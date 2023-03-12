@@ -12,11 +12,12 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="451.0" prefWidth="456.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simple_javafx_app.HelloController">
+<VBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="556.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simple_javafx_app.HelloController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -72,18 +73,18 @@
             </VBox>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <RadioButton mnemonicParsing="false" text="1">
+                  <RadioButton mnemonicParsing="false" onAction="#on_click_1" text="1">
                      <padding>
                         <Insets bottom="20.0" />
                      </padding>
                      <toggleGroup>
                         <ToggleGroup fx:id="grupa2" />
                      </toggleGroup></RadioButton>
-                  <RadioButton mnemonicParsing="false" text="2" toggleGroup="$grupa2">
+                  <RadioButton mnemonicParsing="false" onAction="#on_click_2" text="2" toggleGroup="$grupa2">
                      <padding>
                         <Insets bottom="20.0" />
                      </padding></RadioButton>
-                  <RadioButton mnemonicParsing="false" text="3" toggleGroup="$grupa2">
+                  <RadioButton mnemonicParsing="false" onAction="#on_click_3" text="3" toggleGroup="$grupa2">
                      <padding>
                         <Insets bottom="20.0" />
                      </padding>
@@ -111,9 +112,9 @@
          </children>
       </HBox>
       <Label fx:id="cameleon" text="Text" />
-      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+      <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="20.0" tabMaxWidth="20.0">
         <tabs>
-          <Tab text="Untitled Tab 1">
+          <Tab text="1">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
@@ -121,7 +122,7 @@
                            <children>
                               <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="100.0">
                                  <children>
-                                    <RadioButton mnemonicParsing="false" text="1">
+                                    <RadioButton mnemonicParsing="false" onAction="#on_click_im1" text="1">
                                        <padding>
                                           <Insets bottom="20.0" />
                                        </padding>
@@ -129,30 +130,33 @@
                                           <ToggleGroup fx:id="grupa3" />
                                        </toggleGroup>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="2" toggleGroup="$grupa3">
+                                    <RadioButton mnemonicParsing="false" onAction="#on_click_im2" text="2" toggleGroup="$grupa3">
                                        <padding>
                                           <Insets bottom="20.0" />
                                        </padding>
                                     </RadioButton>
-                                    <RadioButton mnemonicParsing="false" text="3" toggleGroup="$grupa3">
+                                    <RadioButton mnemonicParsing="false" onAction="#on_click_im3" text="3" toggleGroup="$grupa3">
                                        <padding>
                                           <Insets bottom="20.0" />
                                        </padding>
                                     </RadioButton>
                                  </children>
                               </VBox>
+                              <ImageView fx:id="obrazek" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
                            </children>
                         </HBox>
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Untitled Tab 2">
+          <Tab text="2">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <HBox layoutX="50.0" layoutY="23.0" />
                         <ComboBox layoutX="39.0" layoutY="34.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="93.0" prefWidth="338.0" />
-                     </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
             </content>
           </Tab>
         </tabs>
